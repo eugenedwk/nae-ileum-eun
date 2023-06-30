@@ -16,13 +16,13 @@ $ python main.py
    - If using windows, try WSL2 (windows subsystem for linux): https://learn.microsoft.com/en-us/windows/wsl/install
 2. Download the appropriate `Miniconda` installer for your computer
 https://docs.conda.io/en/main/miniconda.html
-1. Move the downloaded `.sh` installer file in your home directory.
+3. Move the downloaded `.sh` installer file in your home directory.
     - To find the path to your home directory, run the following:
         ```bash
         $ cd ~
         $ pwd
         ```
-2. Run the `.sh` installer file
+4. Run the `.sh` installer file
 ```bash
 $ bash Miniconda3-latest-*.sh
 ```
@@ -33,15 +33,15 @@ $ bash Miniconda3-latest-*.sh
 ```bash
 $ conda list
 ``` 
-3. Create a virtual environment for this project
+5. Create a virtual environment for this project
 ```bash
 $ conda create -n venv-romanize python=3.10.8
 ```
-4. Activate the virtual environment
+6. Activate the virtual environment
 ```bash
 $ conda activate venv-romanize
 ```
-5. Install the necessary packages for this project
+7. Install the necessary packages for this project
 ```bash
 $ cd api/
 $ pip install -r requirements.txt
