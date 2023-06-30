@@ -10,6 +10,7 @@ Currently supported for Korean names only
 ```bash
 $ python main.py
 ```
+Navigate to `localhost:8000` in your browser to see the magic!
 
 ## Developer Environment Setup
 1. Ensure you're on a unix-like operating system (MacOS, Ubuntu, etc.)
