@@ -26,10 +26,10 @@ https://docs.conda.io/en/main/miniconda.html
 ```bash
 $ bash Miniconda3-latest-*.sh
 ```
-    - Follow the prompts on the installer screens.
-    - If you are unsure about any setting, accept the defaults. You can change them later.
-    - To make the changes take effect, close and then re-open your terminal window.
-    - Test your installation. In your terminal window or Anaconda Prompt, run the following (a list of installed packages appears if it has been installed correctly):
+   - Follow the prompts on the installer screens.
+   - If you are unsure about any setting, accept the defaults. You can change them later.
+   - To make the changes take effect, close and then re-open your terminal window.
+   - Test your installation. In your terminal window or Anaconda Prompt, run the following (a list of installed packages appears if it has been installed correctly):
 ```bash
 $ conda list
 ``` 
@@ -37,11 +37,11 @@ $ conda list
 ```bash
 $ conda create -n venv-romanize python=3.10.8
 ```
-1. Activate the virtual environment
+4. Activate the virtual environment
 ```bash
 $ conda activate venv-romanize
 ```
-1. Install the necessary packages for this project
+5. Install the necessary packages for this project
 ```bash
 $ cd api/
 $ pip install -r requirements.txt
