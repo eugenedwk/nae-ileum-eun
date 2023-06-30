@@ -19,6 +19,7 @@ next-env.d.ts
 # misc
 .DS_Store
 *.pem
+.settings
 
 # debug
 npm-debug.log*
@@ -36,3 +37,13 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# python
+__pycache__
+*.pyc
+*.egg-info
+.pytest_cache 
+.installed.cfg
+
+# logging
+*.log 
