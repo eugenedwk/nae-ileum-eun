@@ -1,6 +1,5 @@
-# Romanize - a Romanization Service API
-Currently supported for Korean names only
-
+# konglish
+A Korean Name Pronounciation Service API. Currently supported for Korean names only
 
 ## Prerequisites
 - python v3.10.8
@@ -36,11 +35,11 @@ $ conda list
 ``` 
 5. Create a virtual environment for this project
 ```bash
-$ conda create -n venv-romanize python=3.10.8
+$ conda create -n venv-konglish python=3.10.8
 ```
 6. Activate the virtual environment
 ```bash
-$ conda activate venv-romanize
+$ conda activate venv-konglish
 ```
 7. Install the necessary packages for this project
 ```bash
