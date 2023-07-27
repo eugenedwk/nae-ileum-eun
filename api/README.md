@@ -9,7 +9,8 @@ A Korean Name Pronounciation Service API. Currently supported for Korean names o
 ```bash
 $ python main.py
 ```
-Navigate to `localhost:8000` in your browser to see the magic!
+- Navigate to `localhost:8000` in your browser to see the magic!
+- To view API documention and try out endpoints, navigate to `localhost:8000/docs`
 
 ## Developer Environment Setup
 1. Ensure you're on a unix-like operating system (MacOS, Ubuntu, etc.)
