@@ -2,7 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from data_models.name_translation import (
     KoreanName, 
-    PhoneticTranslation,
+    PhoneticTokenTranslation,
     TranslationAPIResponse
 )
 
@@ -39,9 +39,9 @@ async def translate(name:KoreanName) -> TranslationAPIResponse:
     phonetic_li = []
     for i in range(len(name.korean_parallel)):
         phonetic_li.append(
-            PhoneticTranslation(
-                input=name.korean_parallel[i],
-                output=temp_eng[i]
+            PhoneticTokenTranslation(
+                input_token=name.korean_parallel[i],
+                output_token=temp_eng[i]
             )
         )
     
