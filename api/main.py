@@ -1,9 +1,9 @@
 import uvicorn
 from fastapi import FastAPI
 from data_models.name_translation import (
-    KoreanName, 
+    TranslationRequest, 
     PhoneticTokenTranslation,
-    TranslationAPIResponse
+    TranslationResponse
 )
 
 app = FastAPI()
@@ -21,14 +21,14 @@ async def root() -> dict:
     }
 
 @app.post("/translation/")
-async def translate(name:KoreanName) -> TranslationAPIResponse:
+async def translate(req:TranslationRequest) -> TranslationResponse:
     """Function to handle /translation POST request endpoint
 
     Args:
-        name (KoreanName): name with english romanization and korean parallel
+        req (TranslationRequest): target language with name pair (english + language complement name)
 
     Returns:
-        TranslationAPIResponse: JSON response payload as dictionary
+        TranslationResponse: list of input and output translation tokens
     """
     ## TODO: Add code below to take in name and return a pronounciation string
     
@@ -37,17 +37,16 @@ async def translate(name:KoreanName) -> TranslationAPIResponse:
     temp_eng = ["Gah","Nah","Dah","Rah","Mah","Bah","Sah","Ah","Jah","Chah","Kah","Tah","Pah","Hah"]
 
     phonetic_li = []
-    for i in range(len(name.korean_parallel)):
+    for i in range(len(req.name_pair.complement)):
         phonetic_li.append(
             PhoneticTokenTranslation(
-                input_token=name.korean_parallel[i],
+                input_token=req.name_pair.complement[i],
                 output_token=temp_eng[i]
             )
         )
     
     # create and return a translation response
-    resp = TranslationAPIResponse(
-        korean_name=name,
+    resp = TranslationResponse(
         translation=phonetic_li
     )
     print(resp)
