@@ -7,6 +7,7 @@ A Korean Name Pronounciation Service API. Currently supported for Korean names o
 
 ## Quickstart
 ```bash
+$ pip install -r requirements.txt
 $ python main.py
 ```
 - Navigate to `localhost:8000` in your browser to see the magic!
